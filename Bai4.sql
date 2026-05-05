@@ -16,3 +16,6 @@ AND Expiry_Date < '2026-12-31';
 
 SELECT * FROM Pharmacy_Inventory 
 WHERE Drug_Name LIKE 'Para%';
+
+-- Composite Index giúp tối ưu truy vấn nhiều điều kiện → giảm số dòng quét.
+-- LIKE '%keyword%' làm mất khả năng dùng index → gây Full Table Scan.
